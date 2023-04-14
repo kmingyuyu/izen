@@ -1,0 +1,248 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+p {
+    margin: 0 !important;
+}
+.wrap {
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+
+.header {
+    width:1200px;
+    height: 180px;
+    position: relative;
+
+    
+}
+.header-nav {
+    width:1200px;
+    height: 74px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 1px solid rgb(224, 223, 223);
+    
+}
+.header-nav >.nav__logo {
+    width:150px;
+    padding: 10px;
+    display: block;
+    
+    
+}
+.header-nav >.nav__serach {
+    width:200px;
+    display: flex;
+    padding-left:40px;   
+}
+.header-nav >.nav__ul {
+    width: 850px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav >.nav__ul li {
+    padding: 17px;
+}
+
+.nav__ul li a:hover {
+    color: rgb(78, 78, 233) !important;
+}
+
+
+.main {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    
+}
+.main-banner1 {
+    height: 300px;
+    background-color: rgb(217, 217, 217);
+}
+
+.main-banner2{
+    margin: 40px 0;
+}
+
+.banner2__2023 {
+    background-color: #343B53;
+    height: 75px;
+    border-radius: 7px;
+    color: rgb(10, 10, 10);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.banner2__2023 p:nth-child(1) {
+     font-size: 20px;
+     text-align: center;
+     width: 100px;
+     align-items: center;
+     
+}
+.banner2__2023 p:nth-child(2) {
+    width: 1100px;
+}
+
+.banner2__2023 p:nth-child(2) a {
+    color: white !important;
+    text-decoration: underline !important;
+}
+.banner3_sale {
+    height: 500px;
+    background-image: url('../images/banner1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    
+    
+}
+
+.main-banner3 {
+    margin: 40px 0;
+}
+.sale_reward {
+    width: 450px;
+    color: white;
+    padding:50px 35px;
+    
+}
+
+.banner4_app {
+    height: 300px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    display: flex;
+}
+
+
+.banner4_app div:nth-child(1) {
+    width: 400px;
+    background-image: url(../images/banner2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.banner4_app div:nth-child(2) {
+    width: 500px;
+    padding: 20px;
+}
+.banner4_app div:nth-child(3) {
+    width: 300px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.main-banner5 {
+    height: 200px;
+    margin: 20px 0;
+}
+
+.banner5-helper {
+    display: flex;
+}
+.helper1 {
+    margin: 0px 10px 0px 0px;
+}
+.helper2 {
+    margin: 0px 10px;
+}
+.helper3 {
+     margin: 0px 0px 0px 10px;
+}
+.trabel-square {
+    width: 33.33%;
+    border: 1px solid rgb(195, 193, 193) ;
+    border-radius: 12px;
+    padding: 20px 30px 20px 10px;
+}
+.trabel-square > .sqare-set {
+    display: flex;
+ }
+
+.trabel-square > .sqare-set div:nth-child(1) {
+    font-size: 20px;
+    text-align: left;
+    width: 70%;
+}
+.trabel-square > .sqare-set div:nth-child(2) {
+    text-align: right;
+    width: 30%;
+}
+
+.main-banner6 {
+    margin: 30px 0;
+}
+
+.banner-qatar {
+    height: 190px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 10px;
+    display: flex;  
+}
+
+.banner-qatar div:nth-child(1) {
+    width: 55%;
+    background-image: url(../images/banner3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.banner-qatar div:nth-child(2) {
+    width: 45%;
+    padding: 10px 20px ;
+}
+
+.qatar-right img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.qatar-right :nth-child(2) {
+    font-size: 22px;
+    font-weight: 30;
+}
+
+.banner__tst {
+    width: 800px;
+    height: 250px;
+    background-image: url(../images/early1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin:0 10px 0 0 ;  
+    
+}
+.banner__tst p {
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+
+    
+
+

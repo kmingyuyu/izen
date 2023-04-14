@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href$=hwp] {
+            background-color: blue;
+        }
+        /* $= 연결한 파일의 확장자로 찾는다 */
+
+        a[href *="w3"] {
+            background-color: rgb(79, 182, 137);
+
+        }
+        /* *= 작성한 글자를 찾는다 */
+
+    </style>
+</head>
+<body>
+    <h3>회사 소개 파일 내려받기</h3>
+	<ul>
+		<li><a href="intro.hwp">hwp 파일</a></li>
+		<li><a href="intro.xls">엑셀 파일</a></li>
+		<li><a href="www.w3.org">엑셀 파일</a></li>
+
+	</ul>
+
+
+</body>
+</html>

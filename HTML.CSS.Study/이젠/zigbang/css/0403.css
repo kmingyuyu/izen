@@ -1,0 +1,540 @@
+@charset "UTF-8";
+/* 초기화 태그 */
+body { 
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+} 
+ 
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.wrap {
+    overflow: hidden;
+    min-width: 1800px;
+    background-color: white;
+}
+
+.header {
+    position: relative;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+}
+
+
+
+/* --------------상단메뉴------------------ */
+
+.h-logo {
+    width:200px;
+    height:80px;
+    float: left;
+    align-items: center;
+    display: flex;
+    margin:0 20px 0 10px;
+}
+    
+.h-nav {
+    float: left;
+}
+
+.nav_m {
+    width:900px;
+    height:80px;
+    display: flex;
+
+}
+
+.navm-li {
+    float: left;
+    display: flex;
+    padding-right: 40px;
+    align-items: center; 
+}
+.navmli-a{
+    display: block;
+    text-align: left;
+    padding: 20px 15px 17px;
+}
+
+.navmli-a span{
+    display: block;
+}
+.navmli-a span:nth-child(1) {
+    font-weight:bold;
+    font-size:17px
+}
+.navmli-a span:nth-child(2) {
+    font-size:7px
+}
+
+.navm-ul {
+    display: none;
+    width: 200px;
+    background-color: white;
+    border: 1px solid rgb(236, 236, 236);
+    position: absolute;
+    top: 80px;
+    padding: 8px 0;
+}
+
+
+.navm-ul a {
+    display: block;
+    padding: 8px 0px 8px 15px;
+    text-align: start;
+    font-size: 11px;
+}
+
+.navm-li:hover .navm-ul {
+    display: block;
+}
+
+
+.navm-ul a:hover {
+    background-color: rgb(228, 228, 228);
+    color: black !important;
+}
+
+.navm-li :hover {
+    color: RGB(255, 104, 27) !important;
+}
+/* .navm-ul a:hover > .navm-li{
+   color: RGB(255, 104, 27) !important;
+}  */
+
+.h-right {
+    float: right;
+    display: flex;
+    height: 80px;
+
+}
+.h-right div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    margin-right: 15px;
+    
+}
+
+.h-right div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+
+}
+.h-right div:nth-child(2):hover{
+    background-color: rgb(219, 219, 219);
+}
+
+.h-right div:nth-child(1) > a  {
+    height: 30px;
+    font-size: 9px;
+    border-radius: 4px;
+    background-color: rgb(235, 233, 233);
+    border: 1px solid rgb(204, 203, 203);
+    padding: 5px;
+}
+
+.h-right div:nth-child(1) > a:hover{
+    background-color: rgb(219, 219, 219);
+}
+
+
+
+.h-right div:nth-child(2) > a {
+    width: 120px;
+    height: 40px;
+    background-image: url(../images/ceo_ad_img_new.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+/* ------------- 메인 배너 ----------- */
+
+.mbanner {
+    height: 450px;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.mb-ct1 {
+    height: 450px;
+    width: 600px;
+
+}
+
+.mb-ct1 div:nth-child(1) {
+    margin: 100px 0 45px 0;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: rgb(255, 255, 255) 0px 16px 40px;  
+}
+
+.nav-pills {
+    align-items: center !important;
+    border-radius: 9px !important;
+    border: 0px solid transparent !important;
+    opacity: 0.9 !important;
+    background-color: rgb(26, 39, 57) !important;
+}
+.nav-item {
+    width: 120px;
+    display: flex !important;
+    justify-content: center !important;
+
+}
+
+
+.nav-link {
+    padding:10px 0 !important;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    color: white !important;
+    padding: 10px 0;
+}
+
+.nav-link:focus {
+    width: 120px;
+    height: 100%;
+    border: 0px solid transparent !important;
+    border-radius: 9px !important;
+    background-color: white !important;
+    color: rgb(26, 39, 57) !important;
+    } 
+
+
+.mb-3 {
+    margin: 35px 0px 0px 0px !important;
+}
+
+.form-control::placeholder {
+    font-size: 15px !important;
+    font-weight: 550;
+    color: RGB(166, 166, 183) !important; 
+}
+
+
+.form-control {
+    border: none !important;
+    padding: 12px 0px 13px 25px !important;
+}
+
+.form-control:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+#basic-addon2 {
+    border: none !important;
+    background-color: RGB(255, 104, 27);
+    background-image: url(../images/ic_search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    padding: 0 35px;
+    cursor: pointer;
+}
+
+#basic-addon2:hover {
+    background-color: rgb(226, 92, 26);
+
+
+}
+
+
+ 
+/* -----------------메인 중앙 리스트------------------ */
+
+.mlist {
+    height: 250px;
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.ml-center {
+    width: 960px;
+    display: flex;
+
+}
+.mlc-1 {
+    width: 300px;
+}
+.mlc-1 > div:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(216, 214, 214);
+    width: 100%;
+    height: 40px;
+}
+.mlc-1  > div:nth-child(2) {
+    margin-top: 20px;
+
+}
+.mlc-1  > div:nth-child(2) > div:nth-child(1) a {
+    height: 185px;
+    width: 300px;
+    background-image: url(../images/banner1.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.mlc-2 {
+    height: 250px;
+    margin-left:40px;
+    width: 300px;   
+    
+}
+
+.mlc-2 > div:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(216, 214, 214);
+    width: 100%;
+    height: 40px;   
+}
+
+.mlc2-bt {
+    float: right;
+    border: 1px solid rgb(235, 234, 234);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: rgb(235, 233, 233);
+    padding: 5px 8px;
+    color: rgb(92, 92, 92) !important;
+}
+.mlc2-bt:hover {
+    background-color: rgb(219, 219, 219);
+
+}
+
+
+.mlc-2 > div:nth-child(2) {
+    margin-top: 10px;
+    
+}
+
+.mlc2-llout {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    }
+.mlc2-llout:hover {
+    background-color: rgb(243, 243, 243);
+
+}
+.mlc2-llout a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    text-align: left;
+    font-size: 13px !important;
+}
+
+
+    
+
+
+
+/*  -----------메인 폰--------------------*/
+
+.mphone {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.mp-ct {
+    height: 400px;
+    width: 1000px;
+    display: flex;
+
+
+}
+
+.ct-1 {
+    width: 400px;
+    height: 400px;
+}
+
+.ct-1  div  {
+    height: 400px;
+    width: 300px;
+    background-image: url(../images/phone.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 60px;
+}
+
+.ct-2 {
+    width: 600px;
+    height: 400px;
+
+}
+
+.ct2-app {
+    height: 60px;
+    margin: 180px 0 0px 10px ;
+}
+
+.ct2-app div {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.ct2-icon {
+    display: flex;
+}
+
+.ct2-icon a:nth-child(1) {
+    height: 60px;
+    width: 200px;
+    background-image: url(../images/pngwing.com\ \(1\).png);
+    background-size: 75% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    margin-right: 20px;
+    border: 0px solid transparent;
+    border-radius: 5px;
+    background-color: rgb(206, 206, 206) !important;
+
+}
+
+.ct2-icon a:nth-child(1):hover {
+    background-color: rgb(177, 177, 177) !important;
+}
+.ct2-icon a:nth-child(2) {
+    height: 60px;
+    width: 200px;
+    background-image: url(../images/pngwing.com\ \(1\)2.png);
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    background-color: rgb(206, 206, 206) !important;
+    border: 0px solid transparent;
+    border-radius: 5px;
+
+}
+.ct2-icon a:nth-child(2):hover {
+    background-color: rgb(177, 177, 177) !important;
+}
+
+/* --------------------푸터------------------------ */
+.footer {
+    height: 200px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.f-ct {
+    height: 200px;
+    width: 700px;
+}
+
+.fct-1 {
+    font-size: 7px;
+    text-align: center;
+    
+}
+
+
+.fct-2 {
+    height: 180px;
+    width: 700px;
+    
+}
+
+.fct2-1 {
+    margin: 20px 0;
+
+
+}
+
+.fct2-1 div,a {
+    font-size: 7px;
+    text-align: center;
+
+}
+
+.fct2-2 {
+}
+
+.fct22-i {
+    margin: 20px 270px 20px 270px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.fct22-i a:nth-child(1)  {
+    background-image: url(../images/f.png);
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
+}
+.fct22-i a:nth-child(2)  {
+    background-image: url(../images/y.png);
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
+}
+.fct22-i a:nth-child(3)  {
+    background-image: url(../images/b.png);
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
+}
+.fct22-i a:nth-child(4)  {
+    background-image: url(../images/n.png);
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
+}
+.fct22i-under {
+    font-size: 7px;
+    color: rgb(194, 194, 194);
+    text-align: center;
+
+}

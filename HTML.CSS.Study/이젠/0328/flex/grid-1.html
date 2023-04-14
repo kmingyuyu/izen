@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 너비가 같은 컬링 3개를 반복 */
+            grid-template-rows: minmax(100px auto);
+      
+        }
+        .items {
+            background-color: red;
+            padding: 10px;
+        }
+
+        .items:nth-child(odd) { 
+            /* odd = 홀수(1,3,5,7) */
+            background-color: rgb(218, 165, 165);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+      <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt consectetur accusantium neque similique necessitatibus officiis nesciunt repellat quia, pariatur ipsum asperiores distinctio consequatur eos, reiciendis numquam labore assumenda. Laboriosam!
+    </div>
+      <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt consectetur accusantium neque similique necessitatibus officiis nesciunt repellat quia, pariatur ipsum asperiores distinctio consequatur eos, 
+    </div>
+      <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt consectetur accusantium neque similique necessitatibus officiis nesciunt repellat quia, pariatur ipsum asperiores
+    </div>
+      <div class="items">Lorem ipsum dolor sit amet 
+    </div>
+      <div class="items">Lorem ipsum 
+    </div>
+</div>
+
+</body>
+</html>
