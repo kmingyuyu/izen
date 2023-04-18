@@ -30,7 +30,7 @@ $(".register").click(function () {
     return;
   } else {
     if (!emailCheck(email)) {
-      //이메일 형식에 맞지 않을때
+      //이메일 형식에 맞지 않을때 
       alert("이메일 형식에 맞지 않습니다");
       return;
     }

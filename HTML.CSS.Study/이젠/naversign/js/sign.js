@@ -6,27 +6,27 @@ $(".rejister").click(function () {
   const birth = $("#birth").val();
   const check1 = $("#check1").val();
   const day = $("#day").val();
-  const check2 = $("check2").val();
-  const check3 = $("check3").val();
+  // const check2 = $("check2").val();
+  // const check3 = $("check3").val();
 
-  console.log(
-    id,
-    password,
-    passwordre,
-    birth,
-    name,
-    day,
-    check1,
-    check2,
-    check3
-  );
+  // console.log(
+  //   id, 
+  //   password,
+  //   passwordre,
+  //   birth,
+  //   name,
+  //   day,
+  //   check1,
+  //   check2,
+  //   check3
+  // );
 
 
-  if(!id){
+  if (!id) {
     alert('아이디을 입력해주세요')
     return    
-  }else{
-  if(!emailCheck(id)){
+  } else {
+  if (!emailCheck(id)) {
     alert('아이디 형식에 맞게 입력해주세요')
     return
   }}
@@ -36,7 +36,7 @@ $(".rejister").click(function () {
     return
   } else {
     if(!pwdCheck(password)){
-    alert('비밀번호 형식에 맞게 입력해주세요')
+    alert('특수문자 / 문자 / 숫자 포함 형태의 8~15자리 이내로 입력해주세요')
     return
     }
   }
@@ -54,10 +54,6 @@ $(".rejister").click(function () {
     return
   } 
   if(!birth){
-    alert('생년월일을 입력해주세요')
-    return
-  } 
-  if(!birth){
     alert('태어난 년도를 입력해주세요')
     return
   } 
@@ -69,14 +65,11 @@ $(".rejister").click(function () {
     alert('태어난 일을 입력해주세요')
     return
   } 
-  if(!check2){
-    alert('성별을 입력해주세요')
-    return
-  } 
-  if(!check1){
-    alert('태어난 월을 입력해주세요')
-    return
-  } 
+  // if(!check2){
+  //   alert('성별을 입력해주세요')
+  //   return
+  // } 
+ 
 
 alert('회원가입이 완료되었습니다!')
 location.href = "./sign.html"
@@ -84,3 +77,14 @@ location.href = "./sign.html"
 
 
 });
+
+function pwdCheck(password){
+  const min = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+  return min.test(password);
+}
+
+
+function emailCheck(id){
+const min = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+return min.test(id);
+}
