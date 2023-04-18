@@ -37,16 +37,17 @@
               type="email"
               class="id-input txt-right"
               id="1-id"
+              maxlength="40"
               placeholder="@naver.com"
             />
           </div>
           <div class="m-1-4">
             <label for="1-ps1" class="id-label">비밀번호</label>
-            <input type="password" class="id-input" id="1-ps1" placeholder="" />
+            <input type="password" class="id-input" id="1-ps1"  maxlength="12" placeholder="" />
           </div>
           <div class="m-1-4">
             <label for="1-ps2" class="id-label">비밀번호 재확인</label>
-            <input type="password" class="id-input" id="1-ps2" placeholder="" />
+            <input type="password" class="id-input" id="1-ps2" maxlength="12" placeholder="" />
           </div>
           <div class="m-1-4">
             <label for="1-name" class="id-label">이름</label>
@@ -85,21 +86,23 @@
                     <option value="no">선택 안함</option>
             </div>
         <div class="m-1-4">
-            <label for="choice-email" class="id-label">본인 확인 이메일(선택)</label>
-            <input type="email" class="id-input" id="choice-email" placeholder="" />
+          <label for="choice-email" class="id-label">본인 확인 이메일(선택)</label>
+          <input type="email" id="choice-email"class="id-input" placeholder="선택입력"/>
           </div>
           <div class="m-1-4">
+            <div>
             <label for="m-phone">휴대전화</label>
             <select class="" id="check3">
                 <option selected value="korea">대한민국 +82</option>
                 <option value="gana">가나 +233</option>
                 <option value="gris">그리스 +30</option>
+              </div>
                 <div class="row">
-                  <input type="text" id="m-phone" placeholder="전화번호 입력" class="col-md-8">
-                  <button type="button" class="col-md-4 butsm">인증번호 받기</button>
+                  <input type="text" id="m-phone" placeholder="전화번호 입력" class="col-md-6">
+                  <button type="button" class="col-md-5 butsm">인증번호 받기</button>
                 </div>
-                <input type="text" placeholder="인증번호 입력하세요"
-                class="id-input">
+                <div><input type="text" placeholder="인증번호 입력하세요"
+                class="id-input"></div>
               
         </div>
         <div>
