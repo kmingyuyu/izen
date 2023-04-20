@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em !important;
+}
+
+ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  color: rgb(255, 251, 251) !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.wrap {
+  overflow: hidden;
+  min-width: 1400px;
+  background-color: rgb(27, 27, 27);
+}
+
+.header {
+  background-color: rgb(27, 27, 27);
+  position: relative;
+}
+.main {
+  height: 2000px;
+}
+.footer {
+  background-color: rgb(78, 78, 78);
+  width: 100%;
+}
+
+/* ---------스위퍼--------------------- */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1200px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10% 10%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.mySwiper {
+  width: 2450px;
+  height: 800px;
+}
+
+/* ------------------------------------ */
+
+.h-nav {
+  display: flex;
+  height: 160px;
+  align-items: center;
+  margin: 0px 300px;
+}
+.hnav-logo a {
+  background-image: url(../images/EZENBOX\\(1\).png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 350px;
+  height: 100px;
+  display: flex;
+}
+
+.hnav-menu a {
+  color: white !important;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 20px;
+}
+.hnav-menu a:hover {
+  color: rgb(0, 107, 85) !important;
+}
+.hnav-menu {
+  margin-left: 14px;
+  width: 1000px;
+  display: flex;
+}
+
+.playing-pull {
+  display: flex;
+  justify-content: center;
+}
+
+.playing-top {
+  margin-top: 120px;
+}
+
+.playing-botomm {
+  margin-top: 120px;
+}
+
+.top1-4 {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+}
+
+/* -----푸터------ */
+
+.ft-size {
+  height: 450px;
+  background-color: gray;
+}
