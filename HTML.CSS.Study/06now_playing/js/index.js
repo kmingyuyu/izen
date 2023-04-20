@@ -30,24 +30,54 @@ $.ajax({
     
     const results = data.results;
     for (let i=0; i<results.length; i++) {
+      let imgURL = "https://image.tmdb.org/t/p/w500" + results[i].poster_path;
       if(i==0){
-        let imgURL = "https://image.tmdb.org/t/p/w500" + results[i].poster_path;
         $(".test1").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
-        );
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+          $(".play1").append(
+            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+            $(".play1").append(`<p>${results[i].title} | </P>`);
       }
       if(i==1){
-        let imgURL = "https://image.tmdb.org/t/p/w500" + results[i].poster_path;
         $(".test2").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
-        );
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+          $(".play2").append(
+            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
       }
       if(i==2){
-        let imgURL = "https://image.tmdb.org/t/p/w500" + results[i].poster_path;
         $(".test3").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
-        );
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+          $(".play3").append(
+            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
       }
+      if(i==3){
+          $(".play4").append(
+            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+      }
+      if(i==4){
+          $(".play5").append(
+            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+      }
+      if(i==5){
+        $(".play6").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+    }
+    if(i==6){
+      $(".play7").append(
+        `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+  }
+  if(i==7){
+    $(".play8").append(
+      `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+}
+if(i==8){
+  $(".play9").append(
+    `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+}if(i==9){
+  $(".play10").append(
+    `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+}
+    
       
       
       

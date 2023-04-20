@@ -5,17 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
 
-        <div class="images"></div>
+
+        <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide test1">Slide 1</div>
+      <div class="swiper-slide test2" >Slide 2</div>
+      <div class="swiper-slide test3">Slide 3</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script>
+
+      //  -------------swiper---------------------------
+      var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+
+
       const movieURL =
         "https://api.themoviedb.org/3/movie/popular?api_key=fb02461a36052d23db17c429eeb29513&language=ko-KR&page=1&region=KR";
       $.ajax({
@@ -24,22 +90,22 @@
         dataType: "json",
         async: false,
         success: function (data) {
-            console.log("전체data:", data)
+            // console.log("전체data:", data)
             const results = data.results
           console.log("영화 목록:", results);
 
+
           for(const result of results){
-          console.log(result)
-          console.log("영화제목:", result.title)
-          console.log("영화상세설명:", result.overview)
-          console.log("평점:", result.vote_average)
-          console.log("포스터:", result.poster_path)
-
-
-          let imgURL="https://image.tmdb.org/t/p/w500" + result.poster_path
-          $('.images').append(`<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`)
-          $('.images').append(`${result.title}`)
+            let imgURL="https://image.tmdb.org/t/p/w500" + result.poster_path
+            $('.test1').append(`<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`)
+            $('.test1').append(`${result.title}`)
+            console.log(result)
           }
+          // console.log(result)
+          // console.log("영화제목:", result.title)
+          // console.log("영화상세설명:", result.overview)
+          // console.log("평점:", result.vote_average)
+          // console.log("포스터:", result.poster_path)
         },
         error: function (request, status, error) {
           console.log("code:" + request.status);
@@ -47,6 +113,9 @@
           console.log("error:" + error);
         },
       });
+
+
+
     </script>
   </body>
 </html>
