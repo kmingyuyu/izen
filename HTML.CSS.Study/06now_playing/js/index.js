@@ -22,83 +22,100 @@ $.ajax({
   success: function (data) {
     // console.log(data); //data:모든정보
     // console.log(results); //정보내에 상세정보
-    
+
     // title = 제목
     // vote_average =평점
     // overview =영화설명
     // poster_path =포스터
-    
+
     const results = data.results;
-    for (let i=0; i<results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
       let imgURL = "https://image.tmdb.org/t/p/w500" + results[i].poster_path;
-      if(i==0){
+      if (i == 0) {
         $(".test1").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-          $(".play1").append(
-            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-            $(".play1").append(`<p>${results[i].title} | </P>`);
-      }
-      if(i==1){
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+        $(".play1").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>
+          <p>${results[i].overview}</p>`
+        );
+        $(".top-box div:nth-child(1)").append(
+          `${results[i].title}`         
+        );
+        $(".top-box div:nth-child(2)").append(
+          `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${results[i].vote_average}`         
+        );
+
+
+
+        // $(".play1 a").append(
+        //   `${results[i].overview}`         
+        // );
+      } 
+      if (i == 1) {
         $(".test2").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-          $(".play2").append(
-            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+        $(".play2").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
       }
-      if(i==2){
+      if (i == 2) {
         $(".test3").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-          $(".play3").append(
-            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+        $(".play3").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
       }
-      if(i==3){
-          $(".play4").append(
-            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+      if (i == 3) {
+        $(".play4").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
       }
-      if(i==4){
-          $(".play5").append(
-            `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
+      if (i == 4) {
+        $(".play5").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
       }
-      if(i==5){
+      if (i == 5) {
         $(".play6").append(
-          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-    }
-    if(i==6){
-      $(".play7").append(
-        `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-  }
-  if(i==7){
-    $(".play8").append(
-      `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-}
-if(i==8){
-  $(".play9").append(
-    `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-}if(i==9){
-  $(".play10").append(
-    `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`);
-}
-    
-      
-      
-      
-    }
-    
-    // $(".test1").append(`${results[i].title}`);
-    for(const result of results) {
-      // console.log(result)
-     
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
       }
-      
-    
-    
-          
-          // console.log(result.title);
-          // console.log(result.vote_average);
-          // console.log(result.overview);
-          // console.log(result.poster_path);
-          // console.log(result.id);
-          // }
-    
+      if (i == 6) {
+        $(".play7").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+      }
+      if (i == 7) {
+        $(".play8").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+      }
+      if (i == 8) {
+        $(".play9").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+      }
+      if (i == 9) {
+        $(".play10").append(
+          `<a href="./index2.html?id=${results[i].id}"><img src="${imgURL}"></a>`
+        );
+      }
+    }
+
+    // $(".test1").append(`${results[i].title}`);
+    for (const result of results) {
+      // console.log(result)
+    }
+
+    // console.log(result.title);
+    // console.log(result.vote_average);
+    // console.log(result.overview);
+    // console.log(result.poster_path);
+    // console.log(result.id);
+    // }
   },
   error: function (request, status, error) {
     console.log("code:" + request.status);
