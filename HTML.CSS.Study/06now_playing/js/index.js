@@ -1,16 +1,3 @@
-var swiper = new Swiper(".mySwiper", {
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  keyboard: true,
-});
-
-
 // 현재 상영중 
 var movieURL =
 "https://api.themoviedb.org/3/movie/now_playing?api_key=fb02461a36052d23db17c429eeb29513&language=ko-KR&page=1&region=KR";
@@ -35,6 +22,7 @@ $.ajax({
         $(".playnow" + now).append(`<img src="${imgURL}">`); //상영중 박스포스터
         $(".play-title" + now).append(`${result.title}`); //상영중 박스제목
         $(".play-voteaverage" + now ).append( `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${result.vote_average}`); //상영중 박스 평점
+        $(".play-releasedate" + now).append(`${result.release_date}`)
       }
     },
     error: function (request, status, error) {
