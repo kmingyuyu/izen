@@ -177,7 +177,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  /* display: none; */
+  display: none;
   opacity: 1 !important;
 }
 
@@ -207,11 +207,11 @@ p {
 
 .top-aimg:hover .tt66 {
   display: block;
-  z-index: 20;
+  z-index: 120;
 }
 .top-aimg:hover {
   /* background-color: rgba(0, 0, 0, 0.8); */
-  z-index: -1;
+  z-index: -99;
   opacity: 0.4;
 }
 

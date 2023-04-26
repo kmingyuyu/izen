@@ -15,16 +15,28 @@ $.ajax({
     // vote_average =평점
     // overview =영화설명
     // poster_path =포스터
+
     const results = data.results;
-    for (const result of results) {
-      let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
-      now++;
-      $(".playnow" + now).append(`<img src="${imgURL}">`); //상영중 박스포스터
-      $(".play-title" + now).append(`${result.title}`); //상영중 박스제목
-      $(".play-voteaverage" + now).append(
-        `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${result.vote_average}`
-      ); //상영중 박스 평점
-      $(".play-releasedate" + now).append(`${result.release_date}`);
+  //  for(i=0; i<results.length; i++){
+  //   console.log(i)
+  
+  
+  //  } 
+  
+  
+  
+  for (const result of results) {
+        //  console.log(result)
+        //  console.log(results)
+         let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
+         // $(".playnow").attr(".nowp" + now);
+         $(".playnow" + now).append(`<img src="${imgURL}">`); //상영중 박스포스터 
+         $(".play-title" + now).append(`${result.title}`); //상영중 박스제목
+         $(".play-voteaverage" + now).append(
+           `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${result.vote_average}`
+           ); //상영중 박스 평점
+           $(".play-releasedate" + now).append(`${result.release_date}`);
+           now++;
     }
   },
   error: function (request, status, error) {
@@ -48,16 +60,10 @@ $.ajax({
     for (const result of results) {
       up++;
       let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
-      // let imgbackdrop =
-      //   "https://image.tmdb.org/t/p/w500" + result.backdrop_path;
-
-      // $(".test" + up).attr("src", imgbackdrop); //개봉예정 슬라이드 백드랍
       $(".up-poster" + up).append(`<img src="${imgURL}">`); //상영중 박스포스터
       $(".up-title" + up).append(`${result.title}`); //개봉예정 박스제목
       $(".up-releasedate" + up).append(`${result.release_date}`); //개봉예정 날짜
-      $(".up-voteaverage" + up).append(
-        `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${result.vote_average}`
-      ); //개봉예정 박스 평점
+      $(".up-voteaverage" + up).append( `<i class="fa-solid fa-star" style="color: #e4e82c;"></i>&nbsp;${result.vote_average}`); //개봉예정 박스 평점
     }
   },
   error: function (request, status, error) {
@@ -75,10 +81,5 @@ $(document).ready(function () {
       $(".hidesetup").css("display", "block");
     }
   });
-  // $(".morenmore").click(function () {
-  //   if ($(".morenmore").hasClass("morenmore")) {
-  //     $(".morenmore").css("display", "none");
-  //     $(".hidesetup").css("display", "block");
-  //   }
-  // });
+ 
 });
