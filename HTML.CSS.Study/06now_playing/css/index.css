@@ -167,15 +167,23 @@ p {
   color: white;
 }
 
+.up-line {
+  border-bottom: 3px solid rgb(0, 107, 85);
+}
+
 .tt66 {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  display: none;
-  isolation: isolate;
+  /* display: none; */
+  opacity: 1 !important;
 }
+
+/* .tt66 > p:hover {
+  opacity: none !important;
+} */
 
 .tt66 p:nth-child(1) {
   color: rgba(255, 255, 255);
@@ -197,9 +205,6 @@ p {
   height: 330px;
 }
 
-.top-aimg {
-
-}
 .top-aimg:hover .tt66 {
   display: block;
   z-index: 20;
@@ -229,6 +234,10 @@ p {
 }
 
 .hidesetup {
+  display: none;
+}
+
+.hidesetup2 {
   display: none;
 }
 
